@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { LogBox } from 'react-native';
 import StackNavigator from './src/navigation/StackNavigator';
 import { Provider as PaperProvider } from 'react-native-paper';
-import AsyncStorage from "@react-native-async-storage/async-storage";npx 
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const App = () => {
   LogBox.ignoreAllLogs(true)

@@ -1,0 +1,12 @@
+rootProject.name = 'bloodLink'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/react-native-gradle-plugin')
+// include ':react-native-otp-autocomplete'
+// project(':react-native-otp-autocomplete').projectDir = new File('../node_modules/react-native-otp-autocomplete/android')
+
+if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true") {
+    include(":ReactAndroid")
+    project(":ReactAndroid").projectDir = file('../node_modules/react-native/ReactAndroid')
+}
+
